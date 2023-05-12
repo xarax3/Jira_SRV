@@ -12,9 +12,9 @@ services:
       - "8080:8080"
     volumes:
 #      - mehran:/data/jira
-            - type: bind
-        source: /data/jira
-        target: /var/jira
+        - type: bind
+        source: /var/jira
+        target: /data/jira
     restart: always
     networks:
       - network-bridge
