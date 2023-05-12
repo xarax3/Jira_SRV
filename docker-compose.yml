@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+  jira:
+    image: haxqer/jira:9.8.0
+    container_name: jira
+    environment:
+      - TZ=Asia/Tehran
+#      - JVM_MINIMUM_MEMORY=1g
+#      - JVM_MAXIMUM_MEMORY=8g
+#      - JVM_CODE_CACHE_ARGS='-XX:InitialCodeCacheSize=1g -XX:ReservedCodeCacheSize=8g'
+    ports:
+      - "8080:8080"
+    volumes:
+      - mehran:/data/jira
+    restart: always
+    networks:
+      - network-bridge
+
+networks:
+  network-bridge:
+    driver: bridge
+
+volumes:
+  mehran:
+    external: true
