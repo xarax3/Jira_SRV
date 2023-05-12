@@ -23,6 +23,6 @@ networks:
   network-bridge:
     driver: bridge
 
-volumes:
-  mehran:
-    external: false
+#volumes:
+#  mehran:
+ #   external: false
