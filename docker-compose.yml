@@ -11,10 +11,10 @@ services:
     ports:
       - "8080:8080"
     volumes:
-#      - mehran:/data/jira
-        - type: bind
-        source: /data/jira
-        target: /var/jira
+      - mehran:/data/jira
+#        - type: bind
+#        source: /data/jira
+#        target: /var/jira
     restart: always
     networks:
       - network-bridge
@@ -23,6 +23,6 @@ networks:
   network-bridge:
     driver: bridge
 
-#volumes:
-#  mehran:
- #   external: false
+volumes:
+  mehran:
+    external: false
