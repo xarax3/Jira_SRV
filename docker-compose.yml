@@ -13,8 +13,8 @@ services:
     volumes:
 #      - mehran:/data/jira
         - type: bind
-        source: /var/jira
-        target: /data/jira
+        source: /data/jira
+        target: /var/jira
     restart: always
     networks:
       - network-bridge
