@@ -14,7 +14,7 @@ services:
 #      - mehran:/data/jira
             - type: bind
         source: /data/jira
-        target: /var/jiara
+        target: /var/jira
     restart: always
     networks:
       - network-bridge
